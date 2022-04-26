@@ -39,7 +39,21 @@ namespace NotesApp
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
         {
-
+            bd.Notes.Load();
+            selectEntites = (Note)lvNotes.SelectedItem;
+            if (MessageBox.Show("Вы действительно хотите удалить эту заметку?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    bd.Notes.Remove(selectEntites);
+                    bd.SaveChanges();
+                    MessageBox.Show("Заметка удалена", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
