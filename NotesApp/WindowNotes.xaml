@@ -15,7 +15,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBlock Text="Загаловок: " FontSize="24"
+            <TextBlock Text="Заголовок: " FontSize="24"
                        VerticalAlignment="Center" HorizontalAlignment="Center"
                        Margin="10"/>
             <TextBox Name="tbTitle" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"
