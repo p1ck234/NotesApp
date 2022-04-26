@@ -28,7 +28,7 @@ namespace NotesApp.BaseModel
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             Note currentNote = new Note();
-            if (tbTitle.LineCount < 50 && tbBody.Text != "")
+            if (tbTitle.Text != "" && tbTitle.LineCount < 50 && tbBody.Text != "")
             {
                 currentNote.Title = tbTitle.Text;
                 currentNote.Body = tbBody.Text;
