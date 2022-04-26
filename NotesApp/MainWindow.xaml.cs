@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NotesApp.BaseModel;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -31,7 +32,8 @@ namespace NotesApp
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowNotes a = new WindowNotes();
+            a.Show();
         }
 
         private void btnDel_Click(object sender, RoutedEventArgs e)

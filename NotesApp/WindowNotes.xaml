@@ -23,7 +23,7 @@
         </StackPanel>
         <TextBox Grid.Row="1" FontSize="24" 
                  VerticalAlignment="Center" HorizontalAlignment="Center"
-                 Margin="10" Width="500" Height="290"/>
+                 Margin="10" Width="500" Height="270"/>
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center"
                     HorizontalAlignment="Center">
             <Button Name="btnAdd" Click="btnAdd_Click"
