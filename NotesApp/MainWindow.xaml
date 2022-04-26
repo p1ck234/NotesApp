@@ -17,7 +17,7 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Введите название для поиска:"
                            TextAlignment="Right"
-                           FontSize="14" FontFamily="Tahoma" VerticalAlignment="Center"/>
+                           FontSize="14" VerticalAlignment="Center"/>
                 <TextBox Width="200" Name="tbSearch" 
                          TextChanged="tbSearch_TextChanged"/>
                 <Button Content="Открыть" Name="btnOpen" Click="btnOpen_Click" 
