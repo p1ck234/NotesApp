@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,12 @@ namespace NotesApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static BaseModel.ModelBase bd = new BaseModel.ModelBase();
         public MainWindow()
         {
             InitializeComponent();
+            bd.Notes.Load();
+            lvNotes.ItemsSource = bd.Notes.Local;
         }
     }
 }
