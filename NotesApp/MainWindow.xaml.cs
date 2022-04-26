@@ -43,5 +43,10 @@ namespace NotesApp
         {
 
         }
+
+        private void btnOpen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
