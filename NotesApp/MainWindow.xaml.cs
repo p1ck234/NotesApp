@@ -58,7 +58,8 @@ namespace NotesApp
 
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            bd.Notes.Load();
+            lvNotes.ItemsSource = bd.Notes.Local.Where(x=> x.Title.ToLower().Contains(tbSearch.Text.ToLower()) | x.Body.ToLower().Contains(tbSearch.Text.ToLower()));
         }
 
         private void btnOpen_Click(object sender, RoutedEventArgs e)
