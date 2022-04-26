@@ -23,5 +23,15 @@ namespace NotesApp.BaseModel
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -21,5 +21,17 @@
             <TextBox FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"
                      Margin="10" Width="400"/>
         </StackPanel>
+        <TextBox Grid.Row="1" FontSize="24" 
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 Margin="10" Width="500" Height="290"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Button Name="btnAdd" Click="btnAdd_Click"
+                    Content="Добавить" Height="30" Width="100"
+                    Margin="10"/>
+            <Button Name="btnQuit" Click="btnQuit_Click"
+                    Content="Выход" Height="30" Width="100"
+                    Margin="10"/>
+        </StackPanel>
     </Grid>
 </Window>
