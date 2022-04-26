@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,11 @@ namespace NotesApp.BaseModel
         public WindowNotes()
         {
             InitializeComponent();
+            if (MainWindow.selectEntites != null)
+            {
+                tbTitle.Text = MainWindow.selectEntites.Title;
+                tbBody.Text = MainWindow.selectEntites.Body;
+            }
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)

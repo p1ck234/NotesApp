@@ -18,12 +18,12 @@
             <TextBlock Text="Загаловок: " FontSize="24"
                        VerticalAlignment="Center" HorizontalAlignment="Center"
                        Margin="10"/>
-            <TextBox FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"
+            <TextBox Name="tbTitle" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"
                      Margin="10" Width="400"/>
         </StackPanel>
-        <TextBox Grid.Row="1" FontSize="24" 
+        <TextBox Name="tbBody" Grid.Row="1" FontSize="24" 
                  VerticalAlignment="Center" HorizontalAlignment="Center"
-                 Margin="10" Width="500" Height="270"/>
+                 Margin="10" Width="500" Height="270" TextWrapping="Wrap"/>
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center"
                     HorizontalAlignment="Center">
             <Button Name="btnAdd" Click="btnAdd_Click"
