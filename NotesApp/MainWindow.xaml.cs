@@ -52,7 +52,7 @@ namespace NotesApp
             selectEntites = (Note)lvNotes.SelectedItem;
             if (selectEntites != null)
             {
-                WindowNotes a = new WindowNotes();
+                WindowRed a = new WindowRed();
                 a.Show();
             }
             else

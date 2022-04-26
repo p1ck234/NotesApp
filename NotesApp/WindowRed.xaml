@@ -27,7 +27,7 @@
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center"
                     HorizontalAlignment="Center">
             <Button Name="btnAdd" Click="btnAdd_Click"
-                    Content="Добавить" Height="30" Width="100"
+                    Content="Редактировать" Height="30" Width="100"
                     Margin="10"/>
             <Button Name="btnQuit" Click="btnQuit_Click"
                     Content="Выход" Height="30" Width="100"
