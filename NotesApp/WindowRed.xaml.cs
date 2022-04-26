@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,18 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace NotesApp.BaseModel
+namespace NotesApp
 {
     /// <summary>
-    /// Interaction logic for WindowNotes.xaml
+    /// Interaction logic for WindowRed.xaml
     /// </summary>
-    public partial class WindowNotes : Window
+    public partial class WindowRed : Window
     {
-        public WindowNotes()
+        public WindowRed()
         {
             InitializeComponent();
+            tbTitle.Text = MainWindow.selectEntites.Title;
+            tbBody.Text = MainWindow.selectEntites.Body;
         }
-
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
 
