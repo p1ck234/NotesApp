@@ -20,7 +20,7 @@
                            FontSize="14" FontFamily="Tahoma" VerticalAlignment="Center"/>
                 <TextBox Width="200" Name="tbSearch" 
                          TextChanged="tbSearch_TextChanged"/>
-                <Button Content="Создать" Name="btnOpen" Click="btnOpen_Click" 
+                <Button Content="Открыть" Name="btnOpen" Click="btnOpen_Click" 
                         Height="30" Margin="10,0,0,0"/>
                 <Button Content="Создать" Name="btnAdd" Click="btnAdd_Click" 
                         Height="30" Margin="10,0,0,0"/>
