@@ -30,6 +30,7 @@ namespace NotesApp
             lvNotes.ItemsSource = bd.Notes.Local;
         }
 
+        public static Note selectEntites = new Note();
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             WindowNotes a = new WindowNotes();
@@ -48,7 +49,16 @@ namespace NotesApp
 
         private void btnOpen_Click(object sender, RoutedEventArgs e)
         {
-
+            selectEntites = (Note)lvNotes.SelectedItem;
+            if (selectEntites != null)
+            {
+                WindowNotes a = new WindowNotes();
+                a.Show();
+            }
+            else
+            {
+                MessageBox.Show("Вы ничего не выбрали!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
