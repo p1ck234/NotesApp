@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:NotesApp"
         mc:Ignorable="d"
         Icon="Resources/icon.ico"
-        Title="Заметки" Height="450" Width="600" ResizeMode="NoResize"
+        Title="Заметки" Height="500" Width="800" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>

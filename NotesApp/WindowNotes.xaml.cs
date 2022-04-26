@@ -28,25 +28,26 @@ namespace NotesApp.BaseModel
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             Note currentNote = new Note();
-            if (tbTitle.LineCount < 50)
-            currentNote.Title = tbTitle.Text;
-            else
-                MessageBox.Show("Длина заголовка превышает 50 символов","Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            if (tbBody.Text != "")
+            if (tbTitle.LineCount < 50 && tbBody.Text != "")
+            {
+                currentNote.Title = tbTitle.Text;
                 currentNote.Body = tbBody.Text;
+                try
+                {
+                    MainWindow.bd.Notes.Load();
+                    MainWindow.bd.Notes.Add(currentNote);
+                    MainWindow.bd.SaveChanges();
+                    MessageBox.Show("Заметка сохранена", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }    
             else
-                MessageBox.Show("Нельзя сохранить пустую заметку", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            try
             {
-                MainWindow.bd.Notes.Load();
-                MainWindow.bd.Notes.Add(currentNote);
-                MainWindow.bd.SaveChanges();
-                MessageBox.Show("Заметка сохранена", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Длина заголовка превышает 50 символов или вы пытаетесь сохранить пустую заметку", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
