@@ -28,5 +28,20 @@ namespace NotesApp
             bd.Notes.Load();
             lvNotes.ItemsSource = bd.Notes.Local;
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
