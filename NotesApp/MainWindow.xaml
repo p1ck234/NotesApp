@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotesApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Icon="Resources/icon.ico"
+        Title="Заметки" Height="450" Width="800">
     <Grid>
         
     </Grid>
